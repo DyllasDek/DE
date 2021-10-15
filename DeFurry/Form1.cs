@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace DeFurry
+//<ProjectReference Include ="BackEnd/Euler.cs" />
+namespace DE
 {
     public partial class Form1 : Form
     {
@@ -16,5 +16,6 @@ namespace DeFurry
         {
             InitializeComponent();
         }
+
     }
 }
