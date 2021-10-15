@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Methods;
 
 namespace DeFurry
 {
@@ -14,6 +15,9 @@ namespace DeFurry
     {
         public Form1()
         {
+            Euler A = new Euler(1, 2, 3, 4);
+            Imp_Euler B = new Imp_Euler(1, 2, 3, 4);
+            RK C = new RK(1, 2, 3, 4);
             InitializeComponent();
         }
     }

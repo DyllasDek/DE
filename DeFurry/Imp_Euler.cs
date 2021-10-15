@@ -15,11 +15,11 @@ namespace Methods
         */
         public Imp_Euler(float x0, float y0, float X, float N)
         {
-            this->x0 = x0;
-            this->y0 = y0;
-            this->X = X;
-            this->N = N;
-            this->h = (X - x0) / N;
+            this.x0 = x0;
+            this.y0 = y0;
+            this.X = X;
+            this.N = N;
+            this.h = (X - x0) / N;
         }
 
         private static float func(float x, float y)
@@ -27,7 +27,7 @@ namespace Methods
             return (y / x - y - x);
         }
 
-        public static void Graph()
+        public void Graph()
         {
             //тут надо как-то красиво что-то придумать
             float y = y0;

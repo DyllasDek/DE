@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Methods
 {
-    public class Runge_Kutta
+    public class RK
     {
         //Set of initial variables
         float x0;
@@ -13,13 +13,13 @@ namespace Methods
         /*
         Тут короче конструктор где x0 - начало диапазона, y0 - начальное значение, Х - конец диапазона, N - кол-во шагов и из него строим сам шаг
         */
-        public Runge_Kutta(float x0, float y0, float X, float N)
+        public RK(float x0, float y0, float X, float N)
         {
-            this->x0 = x0;
-            this->y0 = y0;
-            this->X = X;
-            this->N = N;
-            this->h = (X - x0) / N;
+            this.x0 = x0;
+            this.y0 = y0;
+            this.X = X;
+            this.N = N;
+            this.h = (X - x0) / N;
         }
 
         private static float func(float x, float y)
@@ -27,7 +27,7 @@ namespace Methods
             return (y / x - y - x);
         }
 
-        public static void Graph()
+        public void Graph()
         {
             //тут надо как-то красиво что-то придумать
             float y = y0;
