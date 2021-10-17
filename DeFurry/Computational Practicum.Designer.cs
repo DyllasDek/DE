@@ -1,7 +1,7 @@
 ﻿
-namespace DeFurry
+namespace DE
 {
-    partial class Form1
+    partial class Comp_Pract
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -41,84 +41,100 @@ namespace DeFurry
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.GS_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.FODE = new System.Windows.Forms.TextBox();
             this.value_y0 = new System.Windows.Forms.TextBox();
             this.value_x0 = new System.Windows.Forms.TextBox();
             this.value_X = new System.Windows.Forms.TextBox();
             this.value_N = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Text_y0 = new System.Windows.Forms.Label();
+            this.Text_x0 = new System.Windows.Forms.Label();
+            this.Text_X = new System.Windows.Forms.Label();
+            this.Text_N = new System.Windows.Forms.Label();
             this.button_S = new System.Windows.Forms.Button();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.LTE_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button_GoS = new System.Windows.Forms.Button();
             this.button_LTE = new System.Windows.Forms.Button();
             this.button_GTE = new System.Windows.Forms.Button();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.GTE_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.value_N0 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LTE_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GTE_chart)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // GS_chart
             // 
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.Title = "X";
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea1.AxisY.Title = "Y";
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.GS_chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(13, 41);
-            this.chart1.Name = "chart1";
+            this.GS_chart.Legends.Add(legend1);
+            this.GS_chart.Location = new System.Drawing.Point(12, 41);
+            this.GS_chart.Name = "GS_chart";
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.EmptyPointStyle.IsValueShownAsLabel = true;
+            series1.Font = null;
+            series1.LabelBorderWidth = 2;
             series1.Legend = "Legend1";
             series1.Name = "Exact Solution";
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Font = null;
+            series2.LabelBorderWidth = 2;
             series2.Legend = "Legend1";
             series2.Name = "Euler";
+            series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Font = null;
+            series3.LabelBorderWidth = 2;
             series3.Legend = "Legend1";
             series3.Name = "ImpEuler";
+            series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series4.Font = null;
+            series4.LabelBorderWidth = 2;
             series4.Legend = "Legend1";
             series4.Name = "RK";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(650, 400);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.GS_chart.Series.Add(series1);
+            this.GS_chart.Series.Add(series2);
+            this.GS_chart.Series.Add(series3);
+            this.GS_chart.Series.Add(series4);
+            this.GS_chart.Size = new System.Drawing.Size(650, 400);
+            this.GS_chart.TabIndex = 0;
+            this.GS_chart.Text = "chart1";
             title1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title1.Name = "Title1";
             title1.Text = "Graph of solutions";
-            this.chart1.Titles.Add(title1);
+            this.GS_chart.Titles.Add(title1);
             // 
-            // textBox1
+            // FODE
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(650, 26);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "y\' = y/x - y - x";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FODE.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FODE.Location = new System.Drawing.Point(12, 9);
+            this.FODE.Name = "FODE";
+            this.FODE.ReadOnly = true;
+            this.FODE.Size = new System.Drawing.Size(650, 32);
+            this.FODE.TabIndex = 1;
+            this.FODE.Text = "y\' = y/x - y - x";
+            this.FODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // value_y0
             // 
@@ -152,45 +168,45 @@ namespace DeFurry
             this.value_N.TabIndex = 9;
             this.value_N.Text = "100";
             // 
-            // label1
+            // Text_y0
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(668, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 21);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "y0";
+            this.Text_y0.AutoSize = true;
+            this.Text_y0.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Text_y0.Location = new System.Drawing.Point(668, 85);
+            this.Text_y0.Name = "Text_y0";
+            this.Text_y0.Size = new System.Drawing.Size(28, 21);
+            this.Text_y0.TabIndex = 10;
+            this.Text_y0.Text = "y0";
             // 
-            // label2
+            // Text_x0
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(668, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 21);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "x0";
+            this.Text_x0.AutoSize = true;
+            this.Text_x0.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Text_x0.Location = new System.Drawing.Point(668, 138);
+            this.Text_x0.Name = "Text_x0";
+            this.Text_x0.Size = new System.Drawing.Size(28, 21);
+            this.Text_x0.TabIndex = 11;
+            this.Text_x0.Text = "x0";
             // 
-            // label3
+            // Text_X
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(668, 191);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 21);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "X";
+            this.Text_X.AutoSize = true;
+            this.Text_X.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Text_X.Location = new System.Drawing.Point(668, 191);
+            this.Text_X.Name = "Text_X";
+            this.Text_X.Size = new System.Drawing.Size(23, 21);
+            this.Text_X.TabIndex = 12;
+            this.Text_X.Text = "X";
             // 
-            // label4
+            // Text_N
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(668, 244);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 21);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "N";
+            this.Text_N.AutoSize = true;
+            this.Text_N.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Text_N.Location = new System.Drawing.Point(668, 244);
+            this.Text_N.Name = "Text_N";
+            this.Text_N.Size = new System.Drawing.Size(23, 21);
+            this.Text_N.TabIndex = 13;
+            this.Text_N.Text = "N";
             // 
             // button_S
             // 
@@ -203,43 +219,43 @@ namespace DeFurry
             this.button_S.UseVisualStyleBackColor = true;
             this.button_S.Click += new System.EventHandler(this.button_S_Click);
             // 
-            // chart2
+            // LTE_Chart
             // 
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.LTE_Chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(12, 41);
-            this.chart2.Name = "chart2";
+            this.LTE_Chart.Legends.Add(legend2);
+            this.LTE_Chart.Location = new System.Drawing.Point(12, 41);
+            this.LTE_Chart.Name = "LTE_Chart";
+            series5.BorderWidth = 2;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
-            series5.Name = "Exact Solution";
+            series5.Name = "Euler";
+            series6.BorderWidth = 2;
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series6.Legend = "Legend1";
-            series6.Name = "Euler";
+            series6.Name = "ImpEuler";
+            series7.BorderWidth = 2;
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             series7.Legend = "Legend1";
-            series7.Name = "ImpEuler";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series8.Legend = "Legend1";
-            series8.Name = "RK";
-            this.chart2.Series.Add(series5);
-            this.chart2.Series.Add(series6);
-            this.chart2.Series.Add(series7);
-            this.chart2.Series.Add(series8);
-            this.chart2.Size = new System.Drawing.Size(650, 400);
-            this.chart2.TabIndex = 15;
-            this.chart2.Text = "chart2";
+            series7.Name = "RK";
+            this.LTE_Chart.Series.Add(series5);
+            this.LTE_Chart.Series.Add(series6);
+            this.LTE_Chart.Series.Add(series7);
+            this.LTE_Chart.Size = new System.Drawing.Size(650, 400);
+            this.LTE_Chart.TabIndex = 15;
+            this.LTE_Chart.Text = "chart2";
             title2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title2.Name = "Title1";
             title2.Text = "LTE";
-            this.chart2.Titles.Add(title2);
-            this.chart2.Visible = false;
+            this.LTE_Chart.Titles.Add(title2);
+            this.LTE_Chart.Visible = false;
             // 
             // button_GoS
             // 
@@ -271,43 +287,43 @@ namespace DeFurry
             this.button_GTE.UseVisualStyleBackColor = true;
             this.button_GTE.Click += new System.EventHandler(this.button_GTE_Click);
             // 
-            // chart3
+            // GTE_chart
             // 
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
             chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
+            this.GTE_chart.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(13, 41);
-            this.chart3.Name = "chart3";
+            this.GTE_chart.Legends.Add(legend3);
+            this.GTE_chart.Location = new System.Drawing.Point(13, 41);
+            this.GTE_chart.Name = "GTE_chart";
+            series8.BorderWidth = 2;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Euler";
+            series9.BorderWidth = 2;
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series9.Legend = "Legend1";
-            series9.Name = "Exact Solution";
+            series9.Name = "ImpEuler";
+            series10.BorderWidth = 2;
             series10.ChartArea = "ChartArea1";
             series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             series10.Legend = "Legend1";
-            series10.Name = "Euler";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series11.Legend = "Legend1";
-            series11.Name = "ImpEuler";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series12.Legend = "Legend1";
-            series12.Name = "RK";
-            this.chart3.Series.Add(series9);
-            this.chart3.Series.Add(series10);
-            this.chart3.Series.Add(series11);
-            this.chart3.Series.Add(series12);
-            this.chart3.Size = new System.Drawing.Size(650, 400);
-            this.chart3.TabIndex = 20;
-            this.chart3.Text = "chart3";
+            series10.Name = "RK";
+            this.GTE_chart.Series.Add(series8);
+            this.GTE_chart.Series.Add(series9);
+            this.GTE_chart.Series.Add(series10);
+            this.GTE_chart.Size = new System.Drawing.Size(650, 400);
+            this.GTE_chart.TabIndex = 20;
+            this.GTE_chart.Text = "chart3";
             title3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title3.Name = "Title1";
             title3.Text = "GTE";
-            this.chart3.Titles.Add(title3);
-            this.chart3.Visible = false;
+            this.GTE_chart.Titles.Add(title3);
+            this.GTE_chart.Visible = false;
             // 
             // value_N0
             // 
@@ -318,7 +334,7 @@ namespace DeFurry
             this.value_N0.Text = "1";
             this.value_N0.Visible = false;
             // 
-            // Form1
+            // Comp_Pract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,45 +347,45 @@ namespace DeFurry
             this.Controls.Add(this.button_LTE);
             this.Controls.Add(this.button_GoS);
             this.Controls.Add(this.button_S);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Text_N);
+            this.Controls.Add(this.Text_X);
+            this.Controls.Add(this.Text_x0);
+            this.Controls.Add(this.Text_y0);
             this.Controls.Add(this.value_N);
             this.Controls.Add(this.value_X);
             this.Controls.Add(this.value_x0);
             this.Controls.Add(this.value_y0);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.chart3);
-            this.Controls.Add(this.chart2);
-            this.Name = "Form1";
+            this.Controls.Add(this.FODE);
+            this.Controls.Add(this.GS_chart);
+            this.Controls.Add(this.LTE_Chart);
+            this.Controls.Add(this.GTE_chart);
+            this.Name = "Comp_Pract";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LTE_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GTE_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FODE;
         private System.Windows.Forms.TextBox value_y0;
         private System.Windows.Forms.TextBox value_x0;
         private System.Windows.Forms.TextBox value_X;
         private System.Windows.Forms.TextBox value_N;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Text_y0;
+        private System.Windows.Forms.Label Text_x0;
+        private System.Windows.Forms.Label Text_X;
+        private System.Windows.Forms.Label Text_N;
         private System.Windows.Forms.Button button_S;
         private System.Windows.Forms.Button button_GoS;
         private System.Windows.Forms.Button button_LTE;
         private System.Windows.Forms.Button button_GTE;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GS_chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart LTE_Chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GTE_chart;
         private System.Windows.Forms.TextBox value_N0;
     }
 }

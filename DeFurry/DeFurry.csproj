@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FF0F07DB-59B7-4D44-9EF2-B3C567055B49}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DeFurry</RootNamespace>
-    <AssemblyName>DeFurry</AssemblyName>
+    <RootNamespace>DE</RootNamespace>
+    <AssemblyName>DE</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,11 +49,11 @@
   <ItemGroup>
     <Compile Include="ES.cs" />
     <Compile Include="Euler.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Computational Practicum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Computational Practicum.Designer.cs">
+      <DependentUpon>Computational Practicum.cs</DependentUpon>
     </Compile>
     <Compile Include="GTE.cs" />
     <Compile Include="Imp_Euler.cs" />
@@ -61,8 +61,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RK.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Computational Practicum.resx">
+      <DependentUpon>Computational Practicum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

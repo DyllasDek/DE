@@ -5,24 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Err
+namespace Errors
 {
     public class GTE
     {
-        public static double[,] Global_Err(string Name,double x0, double y0, double X, int N, int n0)
+        public static double[] Global_Err(string Name,double x0, double y0, double X, int N, int n0)
         {
-            double[,] Err = new double[N, 2];
-            for (int i = n0; i < N; i++)
+            double[] Err = new double[N - n0];
+            for (int En = n0; En < N; En++)
             {
                 switch (Name) {
                     case "E":
-                        Err[i, 1] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, i), Euler.Graph(x0, y0, X, i),i),i);
+                        Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Euler.Graph(x0, y0, X, En),En),En);
                         break;
                     case "IE":
-                        Err[i, 1] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, i), Imp_Euler.Graph(x0, y0, X, i),i), i);
+                        Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Imp_Euler.Graph(x0, y0, X, En),En), En);
                         break;
                     case "RK":
-                        Err[i, 1] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, i), RK.Graph(x0, y0, X, i),i), i);
+                        Err[En - n0] = MaxLocalErr( LTE.Local_Err(ES.Graph(x0, y0, X, En), RK.Graph(x0, y0, X, En),En), En);
                         break;
                 }
             }

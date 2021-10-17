@@ -8,7 +8,7 @@ namespace Methods
 {
     public class ES
     {
-        private static double func_const(double x, double y)
+        private static double func(double x, double y)
         {
             return ((y+x)*Math.Pow(Math.E,x)/x);
         }
@@ -17,7 +17,7 @@ namespace Methods
         {
             double h = (X - x0) / N;
             double[,] arrayXY = new double[N, 2];
-            double C = func_const(x0, y0);
+            double C = func(x0, y0);
             arrayXY[0, 0] = x0;
             arrayXY[0, 1] = y0;
             for (int i = 1; i < N; i++)
