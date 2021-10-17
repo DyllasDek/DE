@@ -66,6 +66,7 @@ namespace DeFurry
             this.button_LTE = new System.Windows.Forms.Button();
             this.button_GTE = new System.Windows.Forms.Button();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.value_N0 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -308,6 +309,15 @@ namespace DeFurry
             this.chart3.Titles.Add(title3);
             this.chart3.Visible = false;
             // 
+            // value_N0
+            // 
+            this.value_N0.Location = new System.Drawing.Point(669, 215);
+            this.value_N0.Name = "value_N0";
+            this.value_N0.Size = new System.Drawing.Size(100, 20);
+            this.value_N0.TabIndex = 21;
+            this.value_N0.Text = "1";
+            this.value_N0.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +326,7 @@ namespace DeFurry
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(783, 499);
+            this.Controls.Add(this.value_N0);
             this.Controls.Add(this.button_GTE);
             this.Controls.Add(this.button_LTE);
             this.Controls.Add(this.button_GoS);
@@ -359,6 +370,7 @@ namespace DeFurry
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.TextBox value_N0;
     }
 }
 

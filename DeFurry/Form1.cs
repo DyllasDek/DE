@@ -27,6 +27,14 @@ namespace DeFurry
 
         private void button_GoS_Click(object sender, EventArgs e)
         {
+            label3.Text = "X";
+            value_N0.Visible = false;
+            value_X.Visible = true;
+            value_x0.Visible = true;
+            value_y0.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+
             chart1.Visible = true;
             chart2.Visible = false;
             chart3.Visible = false;
@@ -34,6 +42,14 @@ namespace DeFurry
 
         private void button_LTE_Click(object sender, EventArgs e)
         {
+            label3.Text = "X";
+            value_N0.Visible = false;
+            value_X.Visible = true;
+            value_x0.Visible = true;
+            value_y0.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+
             chart1.Visible = false;
             chart2.Visible = true;
             chart3.Visible = false;
@@ -41,6 +57,14 @@ namespace DeFurry
 
         private void button_GTE_Click(object sender, EventArgs e)
         {
+            label3.Text = "n0";
+            value_N0.Visible = true;
+            value_X.Visible = false;
+            value_x0.Visible = false;
+            value_y0.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+
             chart1.Visible = false;
             chart2.Visible = false;
             chart3.Visible = true;
@@ -51,12 +75,20 @@ namespace DeFurry
             foreach (var series in chart1.Series) series.Points.Clear();
             foreach (var series in chart2.Series) series.Points.Clear();
             foreach (var series in chart3.Series) series.Points.Clear();
+            try
+            {
+                x0 = double.Parse(value_x0.Text);
+                y0 = double.Parse(value_y0.Text);
+                X = double.Parse(value_X.Text);
+                N = int.Parse(value_N.Text);
+                n0 = int.Parse(value_N0.Text);
+                GraphBuilder();
+            }
+            catch(Exception EE)
+            {
 
-            x0 = double.Parse(value_x0.Text);
-            y0 = double.Parse(value_y0.Text);
-            X = double.Parse(value_X.Text);
-            N = int.Parse(value_N.Text);
-            GraphBuilder();
+                MessageBox.Show(EE.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
         private void GraphBuilder()
         {
