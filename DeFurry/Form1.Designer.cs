@@ -77,7 +77,7 @@ namespace DeFurry
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 41);
+            this.chart1.Location = new System.Drawing.Point(13, 41);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -238,6 +238,7 @@ namespace DeFurry
             title2.Name = "Title1";
             title2.Text = "LTE";
             this.chart2.Titles.Add(title2);
+            this.chart2.Visible = false;
             // 
             // button_GoS
             // 
@@ -275,7 +276,7 @@ namespace DeFurry
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(12, 41);
+            this.chart3.Location = new System.Drawing.Point(13, 41);
             this.chart3.Name = "chart3";
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -305,6 +306,7 @@ namespace DeFurry
             title3.Name = "Title1";
             title3.Text = "GTE";
             this.chart3.Titles.Add(title3);
+            this.chart3.Visible = false;
             // 
             // Form1
             // 
@@ -314,11 +316,9 @@ namespace DeFurry
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(783, 499);
-            this.Controls.Add(this.chart3);
             this.Controls.Add(this.button_GTE);
             this.Controls.Add(this.button_LTE);
             this.Controls.Add(this.button_GoS);
-            this.Controls.Add(this.chart2);
             this.Controls.Add(this.button_S);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -330,6 +330,8 @@ namespace DeFurry
             this.Controls.Add(this.value_y0);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart3);
+            this.Controls.Add(this.chart2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

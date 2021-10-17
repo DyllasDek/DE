@@ -13,9 +13,6 @@ namespace DeFurry
 {
     public partial class Form1 : Form
     {
-        Euler E;
-        Imp_Euler IE;
-        RK RK;
         double x0 = 1;
         double y0 = 0;
         double X = 10;
@@ -23,7 +20,6 @@ namespace DeFurry
         public Form1()
         {
             //E = new Euler(x0, y0, X, N);
-            IE = new Imp_Euler(x0, y0, X, N);
             //RK = new RK(x0, y0, X, N);
             InitializeComponent();
         }
@@ -51,21 +47,28 @@ namespace DeFurry
 
         private void button_S_Click(object sender, EventArgs e)
         {
+            foreach (var series in chart1.Series) series.Points.Clear();
+            foreach (var series in chart2.Series) series.Points.Clear();
+            foreach (var series in chart3.Series) series.Points.Clear();
+
             x0 = double.Parse(value_x0.Text);
             y0 = double.Parse(value_y0.Text);
             X = double.Parse(value_X.Text);
             N = int.Parse(value_N.Text);
-
-            IE.reBuild(x0,y0,X,N);
             GraphBuilder();
         }
         private void GraphBuilder()
         {
-            double[,] arr = IE.Graph();
-            for(int i = 0; i < 100;i++)
-            { 
-                chart1.Series[2].Points.AddXY(arr[i,0],arr[i,1]);
+            double[,] arrE = Euler.Graph(x0, y0, X, N);
+            double[,] arrIE = Imp_Euler.Graph(x0, y0, X, N);
+            double[,] arrRK = RK.Graph(x0, y0, X, N);
+            for (int i = 0; i < N;i++)
+            {
+                chart1.Series[1].Points.AddXY(arrE[i, 0], arrE[i, 1]);
+                chart1.Series[2].Points.AddXY(arrIE[i,0],arrIE[i,1]);
+                chart1.Series[3].Points.AddXY(arrRK[i, 0], arrRK[i, 1]);
             }
         }
+
     }
 }
