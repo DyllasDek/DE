@@ -1,4 +1,3 @@
-using System;
 namespace Methods
 {
     public class Imp_Euler

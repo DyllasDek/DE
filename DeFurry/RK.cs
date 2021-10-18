@@ -1,5 +1,4 @@
-﻿using System;
-namespace Methods
+﻿namespace Methods
 {
     public class RK
     {

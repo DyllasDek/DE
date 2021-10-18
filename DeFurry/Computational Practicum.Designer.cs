@@ -222,7 +222,10 @@ namespace DE
             // LTE_Chart
             // 
             chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.Title = "x";
             chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea2.AxisY.Title = "E";
             chartArea2.Name = "ChartArea1";
             this.LTE_Chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -290,7 +293,10 @@ namespace DE
             // GTE_chart
             // 
             chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.Title = "N";
             chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea3.AxisY.Title = "En";
             chartArea3.Name = "ChartArea1";
             this.GTE_chart.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
