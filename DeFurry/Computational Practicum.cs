@@ -75,6 +75,10 @@ namespace DE
                 X = double.Parse(value_X.Text);
                 N = int.Parse(value_N.Text);
                 n0 = int.Parse(value_N0.Text);
+                if ((X-x0)/N > 1)
+                {
+                    throw new Exception("The length of the interval exceeds the number of iterations. \"X - x0\" must be less than \"N\"");
+                }
                 GraphBuilder();
             }
             catch(Exception EE)
