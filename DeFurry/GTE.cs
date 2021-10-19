@@ -5,8 +5,8 @@ namespace Errors
     {
         public static double[] Global_Err(string Name,double x0, double y0, double X, int N, int n0)
         {
-            double[] Err = new double[N - n0];
-            for (int En = n0; En < N; En++)
+            double[] Err = new double[N - n0 + 1];
+            for (int En = n0; En <= N; En++)
             {
                 switch (Name) {
                     case "E":

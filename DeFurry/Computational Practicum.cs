@@ -110,7 +110,7 @@ namespace DE
                 LTE_Chart.Series[1].Points.AddXY(arrLE_IE[i, 0], arrLE_IE[i, 1]);
                 LTE_Chart.Series[2].Points.AddXY(arrLE_RK[i, 0], arrLE_RK[i, 1]);
             }
-            for (int i = 0; i < N-n0; i++) {
+            for (int i = 0; i < N-n0+1; i++) {
                 GTE_chart.Series[0].Points.AddXY(i + n0, arrGE_E[i]);
                 GTE_chart.Series[1].Points.AddXY(i + n0, arrGE_IE[i]);
                 GTE_chart.Series[2].Points.AddXY(i + n0, arrGE_RK[i]);
