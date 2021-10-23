@@ -2,8 +2,10 @@ namespace Methods
 {
     public class Imp_Euler
     {
+        //Initial function for computing
         private static double Func(double x, double y) => (y / x - y - x);
 
+        //Output X and Y of the Improved Euler method
         public static double[,] Graph(double x0, double y0, double X, uint N)
         {
             double h = (X - x0) / N;

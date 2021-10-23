@@ -29,25 +29,25 @@ namespace DE
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea28 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend28 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series91 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series92 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series93 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series94 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title28 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea29 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend29 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series95 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series96 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series97 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title29 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea30 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend30 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series98 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series99 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series100 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title30 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.GS_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.FODE = new System.Windows.Forms.TextBox();
             this.value_y0 = new System.Windows.Forms.TextBox();
@@ -65,10 +65,16 @@ namespace DE
             this.button_GTE = new System.Windows.Forms.Button();
             this.GTE_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.value_N0 = new System.Windows.Forms.TextBox();
-            this.checkBox_euler = new System.Windows.Forms.CheckBox();
-            this.checkBox_IE = new System.Windows.Forms.CheckBox();
-            this.checkBox_RK = new System.Windows.Forms.CheckBox();
+            this.checkBox_E_GoS = new System.Windows.Forms.CheckBox();
+            this.checkBox_IE_GoS = new System.Windows.Forms.CheckBox();
+            this.checkBox_RK_GoS = new System.Windows.Forms.CheckBox();
             this.checkBox_ES = new System.Windows.Forms.CheckBox();
+            this.checkBox_RK_LTE = new System.Windows.Forms.CheckBox();
+            this.checkBox_IE_LTE = new System.Windows.Forms.CheckBox();
+            this.checkBox_E_LTE = new System.Windows.Forms.CheckBox();
+            this.checkBox_RK_GTE = new System.Windows.Forms.CheckBox();
+            this.checkBox_IE_GTE = new System.Windows.Forms.CheckBox();
+            this.checkBox_E_GTE = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LTE_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GTE_chart)).BeginInit();
@@ -76,58 +82,58 @@ namespace DE
             // 
             // GS_chart
             // 
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.Title = "X";
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea1.AxisY.Title = "Y";
-            chartArea1.Name = "ChartArea1";
-            this.GS_chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.GS_chart.Legends.Add(legend1);
+            chartArea28.AxisX.MajorGrid.Enabled = false;
+            chartArea28.AxisX.Title = "X";
+            chartArea28.AxisY.MajorGrid.Enabled = false;
+            chartArea28.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea28.AxisY.Title = "Y";
+            chartArea28.Name = "ChartArea1";
+            this.GS_chart.ChartAreas.Add(chartArea28);
+            legend28.Name = "Legend1";
+            this.GS_chart.Legends.Add(legend28);
             this.GS_chart.Location = new System.Drawing.Point(12, 41);
             this.GS_chart.Name = "GS_chart";
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.EmptyPointStyle.IsValueShownAsLabel = true;
-            series1.Font = null;
-            series1.LabelBorderWidth = 2;
-            series1.Legend = "Legend1";
-            series1.Name = "Exact solution";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Font = null;
-            series2.LabelBorderWidth = 2;
-            series2.Legend = "Legend1";
-            series2.Name = "Euler";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Font = null;
-            series3.LabelBorderWidth = 2;
-            series3.Legend = "Legend1";
-            series3.Name = "ImpEuler";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series4.Font = null;
-            series4.LabelBorderWidth = 2;
-            series4.Legend = "Legend1";
-            series4.Name = "RK";
-            this.GS_chart.Series.Add(series1);
-            this.GS_chart.Series.Add(series2);
-            this.GS_chart.Series.Add(series3);
-            this.GS_chart.Series.Add(series4);
+            series91.BorderWidth = 2;
+            series91.ChartArea = "ChartArea1";
+            series91.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series91.EmptyPointStyle.IsValueShownAsLabel = true;
+            series91.Font = null;
+            series91.LabelBorderWidth = 2;
+            series91.Legend = "Legend1";
+            series91.Name = "Exact solution";
+            series92.BorderWidth = 2;
+            series92.ChartArea = "ChartArea1";
+            series92.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series92.Font = null;
+            series92.LabelBorderWidth = 2;
+            series92.Legend = "Legend1";
+            series92.Name = "Euler";
+            series93.BorderWidth = 2;
+            series93.ChartArea = "ChartArea1";
+            series93.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series93.Font = null;
+            series93.LabelBorderWidth = 2;
+            series93.Legend = "Legend1";
+            series93.Name = "ImpEuler";
+            series94.BorderWidth = 2;
+            series94.ChartArea = "ChartArea1";
+            series94.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series94.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series94.Font = null;
+            series94.LabelBorderWidth = 2;
+            series94.Legend = "Legend1";
+            series94.Name = "RK";
+            this.GS_chart.Series.Add(series91);
+            this.GS_chart.Series.Add(series92);
+            this.GS_chart.Series.Add(series93);
+            this.GS_chart.Series.Add(series94);
             this.GS_chart.Size = new System.Drawing.Size(650, 400);
             this.GS_chart.TabIndex = 0;
             this.GS_chart.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title1.Name = "Title1";
-            title1.Text = "Graph of solutions";
-            this.GS_chart.Titles.Add(title1);
+            title28.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title28.Name = "Title1";
+            title28.Text = "Graph of solutions";
+            this.GS_chart.Titles.Add(title28);
             // 
             // FODE
             // 
@@ -225,43 +231,43 @@ namespace DE
             // 
             // LTE_chart
             // 
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.Title = "x";
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea2.AxisY.Title = "E";
-            chartArea2.Name = "ChartArea1";
-            this.LTE_chart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.LTE_chart.Legends.Add(legend2);
+            chartArea29.AxisX.MajorGrid.Enabled = false;
+            chartArea29.AxisX.Title = "x";
+            chartArea29.AxisY.MajorGrid.Enabled = false;
+            chartArea29.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea29.AxisY.Title = "E";
+            chartArea29.Name = "ChartArea1";
+            this.LTE_chart.ChartAreas.Add(chartArea29);
+            legend29.Name = "Legend1";
+            this.LTE_chart.Legends.Add(legend29);
             this.LTE_chart.Location = new System.Drawing.Point(12, 41);
             this.LTE_chart.Name = "LTE_chart";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Euler";
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "ImpEuler";
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series7.Legend = "Legend1";
-            series7.Name = "RK";
-            this.LTE_chart.Series.Add(series5);
-            this.LTE_chart.Series.Add(series6);
-            this.LTE_chart.Series.Add(series7);
+            series95.BorderWidth = 2;
+            series95.ChartArea = "ChartArea1";
+            series95.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series95.Legend = "Legend1";
+            series95.Name = "Euler";
+            series96.BorderWidth = 2;
+            series96.ChartArea = "ChartArea1";
+            series96.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series96.Legend = "Legend1";
+            series96.Name = "ImpEuler";
+            series97.BorderWidth = 2;
+            series97.ChartArea = "ChartArea1";
+            series97.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series97.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series97.Legend = "Legend1";
+            series97.Name = "RK";
+            this.LTE_chart.Series.Add(series95);
+            this.LTE_chart.Series.Add(series96);
+            this.LTE_chart.Series.Add(series97);
             this.LTE_chart.Size = new System.Drawing.Size(650, 400);
             this.LTE_chart.TabIndex = 15;
             this.LTE_chart.Text = "chart2";
-            title2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title2.Name = "Title1";
-            title2.Text = "LTE";
-            this.LTE_chart.Titles.Add(title2);
+            title29.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title29.Name = "Title1";
+            title29.Text = "LTE";
+            this.LTE_chart.Titles.Add(title29);
             this.LTE_chart.Visible = false;
             // 
             // button_GoS
@@ -296,43 +302,43 @@ namespace DE
             // 
             // GTE_chart
             // 
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.Title = "N";
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea3.AxisY.Title = "En";
-            chartArea3.Name = "ChartArea1";
-            this.GTE_chart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.GTE_chart.Legends.Add(legend3);
+            chartArea30.AxisX.MajorGrid.Enabled = false;
+            chartArea30.AxisX.Title = "N";
+            chartArea30.AxisY.MajorGrid.Enabled = false;
+            chartArea30.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea30.AxisY.Title = "En";
+            chartArea30.Name = "ChartArea1";
+            this.GTE_chart.ChartAreas.Add(chartArea30);
+            legend30.Name = "Legend1";
+            this.GTE_chart.Legends.Add(legend30);
             this.GTE_chart.Location = new System.Drawing.Point(13, 41);
             this.GTE_chart.Name = "GTE_chart";
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Euler";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.Name = "ImpEuler";
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series10.Legend = "Legend1";
-            series10.Name = "RK";
-            this.GTE_chart.Series.Add(series8);
-            this.GTE_chart.Series.Add(series9);
-            this.GTE_chart.Series.Add(series10);
+            series98.BorderWidth = 2;
+            series98.ChartArea = "ChartArea1";
+            series98.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series98.Legend = "Legend1";
+            series98.Name = "Euler";
+            series99.BorderWidth = 2;
+            series99.ChartArea = "ChartArea1";
+            series99.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series99.Legend = "Legend1";
+            series99.Name = "ImpEuler";
+            series100.BorderWidth = 2;
+            series100.ChartArea = "ChartArea1";
+            series100.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series100.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series100.Legend = "Legend1";
+            series100.Name = "RK";
+            this.GTE_chart.Series.Add(series98);
+            this.GTE_chart.Series.Add(series99);
+            this.GTE_chart.Series.Add(series100);
             this.GTE_chart.Size = new System.Drawing.Size(650, 400);
             this.GTE_chart.TabIndex = 20;
             this.GTE_chart.Text = "chart3";
-            title3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title3.Name = "Title1";
-            title3.Text = "GTE";
-            this.GTE_chart.Titles.Add(title3);
+            title30.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title30.Name = "Title1";
+            title30.Text = "GTE";
+            this.GTE_chart.Titles.Add(title30);
             this.GTE_chart.Visible = false;
             // 
             // value_N0
@@ -344,44 +350,44 @@ namespace DE
             this.value_N0.Text = "10";
             this.value_N0.Visible = false;
             // 
-            // checkBox_euler
+            // checkBox_E_GoS
             // 
-            this.checkBox_euler.AutoSize = true;
-            this.checkBox_euler.Checked = true;
-            this.checkBox_euler.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_euler.Location = new System.Drawing.Point(669, 317);
-            this.checkBox_euler.Name = "checkBox_euler";
-            this.checkBox_euler.Size = new System.Drawing.Size(80, 17);
-            this.checkBox_euler.TabIndex = 22;
-            this.checkBox_euler.Text = "Show Euler";
-            this.checkBox_euler.UseVisualStyleBackColor = true;
-            this.checkBox_euler.CheckedChanged += new System.EventHandler(this.checkBox_euler_CheckedChanged);
+            this.checkBox_E_GoS.AutoSize = true;
+            this.checkBox_E_GoS.Checked = true;
+            this.checkBox_E_GoS.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_E_GoS.Location = new System.Drawing.Point(669, 318);
+            this.checkBox_E_GoS.Name = "checkBox_E_GoS";
+            this.checkBox_E_GoS.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_E_GoS.TabIndex = 22;
+            this.checkBox_E_GoS.Text = "Show Euler";
+            this.checkBox_E_GoS.UseVisualStyleBackColor = true;
+            this.checkBox_E_GoS.CheckedChanged += new System.EventHandler(this.checkBox_E_GoS_CheckedChanged);
             // 
-            // checkBox_IE
+            // checkBox_IE_GoS
             // 
-            this.checkBox_IE.AutoSize = true;
-            this.checkBox_IE.Checked = true;
-            this.checkBox_IE.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_IE.Location = new System.Drawing.Point(669, 341);
-            this.checkBox_IE.Name = "checkBox_IE";
-            this.checkBox_IE.Size = new System.Drawing.Size(100, 17);
-            this.checkBox_IE.TabIndex = 23;
-            this.checkBox_IE.Text = "Show Imp Euler";
-            this.checkBox_IE.UseVisualStyleBackColor = true;
-            this.checkBox_IE.CheckedChanged += new System.EventHandler(this.checkBox_IE_CheckedChanged);
+            this.checkBox_IE_GoS.AutoSize = true;
+            this.checkBox_IE_GoS.Checked = true;
+            this.checkBox_IE_GoS.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_IE_GoS.Location = new System.Drawing.Point(669, 341);
+            this.checkBox_IE_GoS.Name = "checkBox_IE_GoS";
+            this.checkBox_IE_GoS.Size = new System.Drawing.Size(100, 17);
+            this.checkBox_IE_GoS.TabIndex = 23;
+            this.checkBox_IE_GoS.Text = "Show Imp Euler";
+            this.checkBox_IE_GoS.UseVisualStyleBackColor = true;
+            this.checkBox_IE_GoS.CheckedChanged += new System.EventHandler(this.checkBox_IE_CheckedChanged);
             // 
-            // checkBox_RK
+            // checkBox_RK_GoS
             // 
-            this.checkBox_RK.AutoSize = true;
-            this.checkBox_RK.Checked = true;
-            this.checkBox_RK.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_RK.Location = new System.Drawing.Point(669, 364);
-            this.checkBox_RK.Name = "checkBox_RK";
-            this.checkBox_RK.Size = new System.Drawing.Size(71, 17);
-            this.checkBox_RK.TabIndex = 24;
-            this.checkBox_RK.Text = "Show RK";
-            this.checkBox_RK.UseVisualStyleBackColor = true;
-            this.checkBox_RK.CheckedChanged += new System.EventHandler(this.checkBox_RK_CheckedChanged);
+            this.checkBox_RK_GoS.AutoSize = true;
+            this.checkBox_RK_GoS.Checked = true;
+            this.checkBox_RK_GoS.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_RK_GoS.Location = new System.Drawing.Point(669, 364);
+            this.checkBox_RK_GoS.Name = "checkBox_RK_GoS";
+            this.checkBox_RK_GoS.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_RK_GoS.TabIndex = 24;
+            this.checkBox_RK_GoS.Text = "Show RK";
+            this.checkBox_RK_GoS.UseVisualStyleBackColor = true;
+            this.checkBox_RK_GoS.CheckedChanged += new System.EventHandler(this.checkBox_RK_GoS_CheckedChanged);
             // 
             // checkBox_ES
             // 
@@ -396,6 +402,84 @@ namespace DE
             this.checkBox_ES.UseVisualStyleBackColor = true;
             this.checkBox_ES.CheckedChanged += new System.EventHandler(this.checkBox_ES_CheckedChanged);
             // 
+            // checkBox_RK_LTE
+            // 
+            this.checkBox_RK_LTE.AutoSize = true;
+            this.checkBox_RK_LTE.Checked = true;
+            this.checkBox_RK_LTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_RK_LTE.Location = new System.Drawing.Point(669, 364);
+            this.checkBox_RK_LTE.Name = "checkBox_RK_LTE";
+            this.checkBox_RK_LTE.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_RK_LTE.TabIndex = 28;
+            this.checkBox_RK_LTE.Text = "Show RK";
+            this.checkBox_RK_LTE.UseVisualStyleBackColor = true;
+            this.checkBox_RK_LTE.CheckedChanged += new System.EventHandler(this.checkBox_RK_LTE_CheckedChanged);
+            // 
+            // checkBox_IE_LTE
+            // 
+            this.checkBox_IE_LTE.AutoSize = true;
+            this.checkBox_IE_LTE.Checked = true;
+            this.checkBox_IE_LTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_IE_LTE.Location = new System.Drawing.Point(669, 341);
+            this.checkBox_IE_LTE.Name = "checkBox_IE_LTE";
+            this.checkBox_IE_LTE.Size = new System.Drawing.Size(100, 17);
+            this.checkBox_IE_LTE.TabIndex = 27;
+            this.checkBox_IE_LTE.Text = "Show Imp Euler";
+            this.checkBox_IE_LTE.UseVisualStyleBackColor = true;
+            this.checkBox_IE_LTE.CheckedChanged += new System.EventHandler(this.checkBox_IE_LTE_CheckedChanged);
+            // 
+            // checkBox_E_LTE
+            // 
+            this.checkBox_E_LTE.AutoSize = true;
+            this.checkBox_E_LTE.Checked = true;
+            this.checkBox_E_LTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_E_LTE.Location = new System.Drawing.Point(669, 318);
+            this.checkBox_E_LTE.Name = "checkBox_E_LTE";
+            this.checkBox_E_LTE.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_E_LTE.TabIndex = 26;
+            this.checkBox_E_LTE.Text = "Show Euler";
+            this.checkBox_E_LTE.UseVisualStyleBackColor = true;
+            this.checkBox_E_LTE.CheckedChanged += new System.EventHandler(this.checkBox_E_LTE_CheckedChanged);
+            // 
+            // checkBox_RK_GTE
+            // 
+            this.checkBox_RK_GTE.AutoSize = true;
+            this.checkBox_RK_GTE.Checked = true;
+            this.checkBox_RK_GTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_RK_GTE.Location = new System.Drawing.Point(669, 364);
+            this.checkBox_RK_GTE.Name = "checkBox_RK_GTE";
+            this.checkBox_RK_GTE.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_RK_GTE.TabIndex = 31;
+            this.checkBox_RK_GTE.Text = "Show RK";
+            this.checkBox_RK_GTE.UseVisualStyleBackColor = true;
+            this.checkBox_RK_GTE.CheckedChanged += new System.EventHandler(this.checkBox_RK_GTE_CheckedChanged);
+            // 
+            // checkBox_IE_GTE
+            // 
+            this.checkBox_IE_GTE.AutoSize = true;
+            this.checkBox_IE_GTE.Checked = true;
+            this.checkBox_IE_GTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_IE_GTE.Location = new System.Drawing.Point(669, 341);
+            this.checkBox_IE_GTE.Name = "checkBox_IE_GTE";
+            this.checkBox_IE_GTE.Size = new System.Drawing.Size(100, 17);
+            this.checkBox_IE_GTE.TabIndex = 30;
+            this.checkBox_IE_GTE.Text = "Show Imp Euler";
+            this.checkBox_IE_GTE.UseVisualStyleBackColor = true;
+            this.checkBox_IE_GTE.CheckedChanged += new System.EventHandler(this.checkBox_IE_GTE_CheckedChanged);
+            // 
+            // checkBox_E_GTE
+            // 
+            this.checkBox_E_GTE.AutoSize = true;
+            this.checkBox_E_GTE.Checked = true;
+            this.checkBox_E_GTE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_E_GTE.Location = new System.Drawing.Point(669, 318);
+            this.checkBox_E_GTE.Name = "checkBox_E_GTE";
+            this.checkBox_E_GTE.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_E_GTE.TabIndex = 29;
+            this.checkBox_E_GTE.Text = "Show Euler";
+            this.checkBox_E_GTE.UseVisualStyleBackColor = true;
+            this.checkBox_E_GTE.CheckedChanged += new System.EventHandler(this.checkBox_E_GTE_CheckedChanged);
+            // 
             // Comp_Pract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,9 +489,8 @@ namespace DE
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(783, 499);
             this.Controls.Add(this.checkBox_ES);
-            this.Controls.Add(this.checkBox_RK);
-            this.Controls.Add(this.checkBox_IE);
-            this.Controls.Add(this.checkBox_euler);
+            this.Controls.Add(this.checkBox_RK_GoS);
+            this.Controls.Add(this.checkBox_E_GoS);
             this.Controls.Add(this.button_GTE);
             this.Controls.Add(this.button_LTE);
             this.Controls.Add(this.button_GoS);
@@ -425,6 +508,13 @@ namespace DE
             this.Controls.Add(this.GTE_chart);
             this.Controls.Add(this.value_N0);
             this.Controls.Add(this.value_X);
+            this.Controls.Add(this.checkBox_E_GTE);
+            this.Controls.Add(this.checkBox_E_LTE);
+            this.Controls.Add(this.checkBox_RK_GTE);
+            this.Controls.Add(this.checkBox_RK_LTE);
+            this.Controls.Add(this.checkBox_IE_GoS);
+            this.Controls.Add(this.checkBox_IE_GTE);
+            this.Controls.Add(this.checkBox_IE_LTE);
             this.Name = "Comp_Pract";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).EndInit();
@@ -453,10 +543,16 @@ namespace DE
         private System.Windows.Forms.DataVisualization.Charting.Chart LTE_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart GTE_chart;
         private System.Windows.Forms.TextBox value_N0;
-        private System.Windows.Forms.CheckBox checkBox_euler;
-        private System.Windows.Forms.CheckBox checkBox_IE;
-        private System.Windows.Forms.CheckBox checkBox_RK;
+        private System.Windows.Forms.CheckBox checkBox_E_GoS;
+        private System.Windows.Forms.CheckBox checkBox_IE_GoS;
+        private System.Windows.Forms.CheckBox checkBox_RK_GoS;
         private System.Windows.Forms.CheckBox checkBox_ES;
+        private System.Windows.Forms.CheckBox checkBox_RK_LTE;
+        private System.Windows.Forms.CheckBox checkBox_IE_LTE;
+        private System.Windows.Forms.CheckBox checkBox_E_LTE;
+        private System.Windows.Forms.CheckBox checkBox_RK_GTE;
+        private System.Windows.Forms.CheckBox checkBox_IE_GTE;
+        private System.Windows.Forms.CheckBox checkBox_E_GTE;
     }
 }
 

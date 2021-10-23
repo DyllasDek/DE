@@ -3,6 +3,7 @@ namespace Errors
 {
     public class GTE
     {
+        //Output X and Y of the Global Errors of the method
         public static double[] Global_Err(string Name,double x0, double y0, double X, uint N, uint n0)
         {
             double[] Err = new double[N - n0 + 1];
@@ -23,6 +24,7 @@ namespace Errors
             return Err;
         }
 
+        //Method of finding Maximum Locall Err
         private static double MaxLocalErr(double[,] LR,uint N)
         {
             double max = double.MinValue;

@@ -29,6 +29,15 @@ namespace DE
             Text_y0.Visible = true;
             Text_x0.Visible = true;
             checkBox_ES.Visible = true;
+            checkBox_E_LTE.Visible = false;
+            checkBox_E_GTE.Visible = false;
+            checkBox_E_GoS.Visible = true;
+            checkBox_IE_LTE.Visible = false;
+            checkBox_IE_GTE.Visible = false;
+            checkBox_IE_GoS.Visible = true;
+            checkBox_RK_LTE.Visible = false;
+            checkBox_RK_GTE.Visible = false;
+            checkBox_RK_GoS.Visible = true;
 
             GS_chart.Visible = true;
             LTE_chart.Visible = false;
@@ -46,6 +55,15 @@ namespace DE
             Text_y0.Visible = true;
             Text_x0.Visible = true;
             checkBox_ES.Visible = false;
+            checkBox_E_LTE.Visible = true;
+            checkBox_E_GTE.Visible = false;
+            checkBox_E_GoS.Visible = false;
+            checkBox_IE_LTE.Visible = true;
+            checkBox_IE_GTE.Visible = false;
+            checkBox_IE_GoS.Visible = false;
+            checkBox_RK_LTE.Visible = true;
+            checkBox_RK_GTE.Visible = false;
+            checkBox_RK_GoS.Visible = false;
 
             GS_chart.Visible = false;
             LTE_chart.Visible = true;
@@ -63,6 +81,15 @@ namespace DE
             Text_y0.Visible = false;
             Text_x0.Visible = false;
             checkBox_ES.Visible = false;
+            checkBox_E_LTE.Visible = false;
+            checkBox_E_GTE.Visible = true;
+            checkBox_E_GoS.Visible = false;
+            checkBox_IE_LTE.Visible = false;
+            checkBox_IE_GTE.Visible = true;
+            checkBox_IE_GoS.Visible = false;
+            checkBox_RK_LTE.Visible = false;
+            checkBox_RK_GTE.Visible = true;
+            checkBox_RK_GoS.Visible = false;
 
             GS_chart.Visible = false;
             LTE_chart.Visible = false;
@@ -73,11 +100,14 @@ namespace DE
         {
             try
             {
+                //Initial values
                 x0 = double.Parse(value_x0.Text);
                 y0 = double.Parse(value_y0.Text);
                 X = double.Parse(value_X.Text);
                 N = uint.Parse(value_N.Text);
                 n0 = uint.Parse(value_N0.Text);
+                
+                //Exceptions
                 if ((X-x0)/N > 1)
                 {
                     throw new Exception("The length of the interval exceeds the number of iterations. \"X - x0\" must be less than \"N\"");
@@ -86,11 +116,21 @@ namespace DE
                 {
                     throw new Exception("The length of the interval exceeds the number of minimal iterations. \"X - x0\" must be less than \"n0\"");
                 }
+                else if(X <= x0)
+                {
+                    throw new Exception("The value of \"X\" is less then \"x0\"");
+                }
+                
+                //Clean the graphs
                 foreach (var series in GS_chart.Series) series.Points.Clear();
                 foreach (var series in LTE_chart.Series) series.Points.Clear();
                 foreach (var series in GTE_chart.Series) series.Points.Clear();
+                
+                //Call Graph Builder
                 GraphBuilder();
             }
+
+            //Exceptions output
             catch(Exception EE)
             {
 
@@ -99,6 +139,7 @@ namespace DE
         }
         private void GraphBuilder()
         {
+            //X and Y values of all graphs
             double[,] arrES = ES.Graph(x0, y0, X, N);
             double[,] arrE = Euler.Graph(x0, y0, X, N);
             double[,] arrIE = Imp_Euler.Graph(x0, y0, X, N);
@@ -110,6 +151,7 @@ namespace DE
             double[] arrGE_IE = GTE.Global_Err("IE", x0, y0, X, N, n0);
             double[] arrGE_RK = GTE.Global_Err("RK", x0, y0, X, N, n0);
 
+            //Building the graphs
             for (int i = 0; i < N; i++)
             {
                 GS_chart.Series["Exact solution"].Points.AddXY(arrES[i, 0], arrES[i, 1]);
@@ -128,32 +170,60 @@ namespace DE
             }
         }
 
-        private void checkBox_euler_CheckedChanged(object sender, EventArgs e)
+        //Change visibility of Euler Graphs
+        private void checkBox_E_GoS_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["Euler"].Enabled = !GS_chart.Series["Euler"].Enabled;
+        }
+        private void checkBox_E_LTE_CheckedChanged(object sender, EventArgs e)
+        {
             LTE_chart.Series["Euler"].Enabled = !LTE_chart.Series["Euler"].Enabled;
+        }
+        private void checkBox_E_GTE_CheckedChanged(object sender, EventArgs e)
+        {
             GTE_chart.Series["Euler"].Enabled = !GTE_chart.Series["Euler"].Enabled;
         }
+
+        //Change visibility of Improved Euler Graphs
 
         private void checkBox_IE_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["ImpEuler"].Enabled = !GS_chart.Series["ImpEuler"].Enabled;
+
+        }
+        private void checkBox_IE_LTE_CheckedChanged(object sender, EventArgs e)
+        {
             LTE_chart.Series["ImpEuler"].Enabled = !LTE_chart.Series["ImpEuler"].Enabled;
+        }
+        private void checkBox_IE_GTE_CheckedChanged(object sender, EventArgs e)
+        {
             GTE_chart.Series["ImpEuler"].Enabled = !GTE_chart.Series["ImpEuler"].Enabled;
         }
 
-        private void checkBox_RK_CheckedChanged(object sender, EventArgs e)
+        //Change visibility of Runge-Kutta Graphs
+
+        private void checkBox_RK_GoS_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["RK"].Enabled = !GS_chart.Series["RK"].Enabled;
+        }
+        private void checkBox_RK_LTE_CheckedChanged(object sender, EventArgs e)
+        {
             LTE_chart.Series["RK"].Enabled = !LTE_chart.Series["RK"].Enabled;
+        }
+        private void checkBox_RK_GTE_CheckedChanged(object sender, EventArgs e)
+        {
             GTE_chart.Series["RK"].Enabled = !GTE_chart.Series["RK"].Enabled;
         }
 
+        //Change visibility of Exact solutin Graphs
         private void checkBox_ES_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["Exact solution"].Enabled = !GS_chart.Series["Exact solution"].Enabled;
-            LTE_chart.Series["Exact solution"].Enabled = !LTE_chart.Series["Exact solution"].Enabled;
-            GTE_chart.Series["Exact solution"].Enabled = !GTE_chart.Series["Exact solution"].Enabled;
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
