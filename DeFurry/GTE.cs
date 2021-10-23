@@ -1,4 +1,5 @@
 ﻿using Methods;
+using System;
 namespace Errors
 {
     public class GTE
@@ -12,6 +13,7 @@ namespace Errors
                 switch (Name) {
                     case "E":
                         Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Euler.Graph(x0, y0, X, En),En),En);
+                        Console.WriteLine(Err[En - n0]);
                         break;
                     case "IE":
                         Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Imp_Euler.Graph(x0, y0, X, En),En), En);
