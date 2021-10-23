@@ -30,7 +30,6 @@ namespace DE
             checkBox_E_LTE.Visible = false;
             checkBox_E_GTE.Visible = false;
 
-
             checkBox_IE_GoS.Visible = true;
             checkBox_IE_LTE.Visible = false;
             checkBox_IE_GTE.Visible = false;
