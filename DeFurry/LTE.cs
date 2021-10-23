@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Errors
 {
     public class LTE

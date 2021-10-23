@@ -7,95 +7,88 @@ namespace DE
 {
     public partial class Comp_Pract : Form
     {
+        //Initial conditions
         private double x0 = 1;
         private double y0 = 0;
         private double X = 10;
         private uint N = 100;
         private uint n0 = 10;
+
+        //Constructor of the form
         public Comp_Pract()
         {
             InitializeComponent();
             GraphBuilder();
         }
 
+        //Button of the GoS
         private void button_GoS_Click(object sender, EventArgs e)
         {
-            Text_X.Text = "X";
-            value_N0.Visible = false;
-            
-            value_X.Visible = true;
-            value_x0.Visible = true;
-            value_y0.Visible = true;
-            Text_y0.Visible = true;
-            Text_x0.Visible = true;
             checkBox_ES.Visible = true;
+
+            checkBox_E_GoS.Visible = true;
             checkBox_E_LTE.Visible = false;
             checkBox_E_GTE.Visible = false;
-            checkBox_E_GoS.Visible = true;
+
+
+            checkBox_IE_GoS.Visible = true;
             checkBox_IE_LTE.Visible = false;
             checkBox_IE_GTE.Visible = false;
-            checkBox_IE_GoS.Visible = true;
+
+            checkBox_RK_GoS.Visible = true;
             checkBox_RK_LTE.Visible = false;
             checkBox_RK_GTE.Visible = false;
-            checkBox_RK_GoS.Visible = true;
 
             GS_chart.Visible = true;
             LTE_chart.Visible = false;
             GTE_chart.Visible = false;
         }
 
+        //Button of the LTE
         private void button_LTE_Click(object sender, EventArgs e)
         {
-            Text_X.Text = "X";
-            value_N0.Visible = false;
-            
-            value_X.Visible = true;
-            value_x0.Visible = true;
-            value_y0.Visible = true;
-            Text_y0.Visible = true;
-            Text_x0.Visible = true;
             checkBox_ES.Visible = false;
+
+            checkBox_E_GoS.Visible = false;
             checkBox_E_LTE.Visible = true;
             checkBox_E_GTE.Visible = false;
-            checkBox_E_GoS.Visible = false;
+
+            checkBox_IE_GoS.Visible = false;
             checkBox_IE_LTE.Visible = true;
             checkBox_IE_GTE.Visible = false;
-            checkBox_IE_GoS.Visible = false;
+   
+            checkBox_RK_GoS.Visible = false;
             checkBox_RK_LTE.Visible = true;
             checkBox_RK_GTE.Visible = false;
-            checkBox_RK_GoS.Visible = false;
 
             GS_chart.Visible = false;
             LTE_chart.Visible = true;
             GTE_chart.Visible = false;
         }
 
+        //Button of the GTE
         private void button_GTE_Click(object sender, EventArgs e)
         {
-            Text_X.Text = "n0";
-            value_N0.Visible = true;
-            
-            value_X.Visible = false;
-            value_x0.Visible = false;
-            value_y0.Visible = false;
-            Text_y0.Visible = false;
-            Text_x0.Visible = false;
             checkBox_ES.Visible = false;
+
+            checkBox_E_GoS.Visible = false;
             checkBox_E_LTE.Visible = false;
             checkBox_E_GTE.Visible = true;
-            checkBox_E_GoS.Visible = false;
+
+            checkBox_IE_GoS.Visible = false;
             checkBox_IE_LTE.Visible = false;
             checkBox_IE_GTE.Visible = true;
-            checkBox_IE_GoS.Visible = false;
+
+            checkBox_RK_GoS.Visible = false;
             checkBox_RK_LTE.Visible = false;
             checkBox_RK_GTE.Visible = true;
-            checkBox_RK_GoS.Visible = false;
 
             GS_chart.Visible = false;
             LTE_chart.Visible = false;
             GTE_chart.Visible = true;
         }
 
+        //Submit new data button
         private void button_S_Click(object sender, EventArgs e)
         {
             try
@@ -137,6 +130,8 @@ namespace DE
                 MessageBox.Show(EE.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        //Builder of the graphs
         private void GraphBuilder()
         {
             //X and Y values of all graphs
@@ -184,8 +179,8 @@ namespace DE
             GTE_chart.Series["Euler"].Enabled = !GTE_chart.Series["Euler"].Enabled;
         }
 
-        //Change visibility of Improved Euler Graphs
 
+        //Change visibility of Improved Euler Graphs
         private void checkBox_IE_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["ImpEuler"].Enabled = !GS_chart.Series["ImpEuler"].Enabled;
@@ -200,8 +195,8 @@ namespace DE
             GTE_chart.Series["ImpEuler"].Enabled = !GTE_chart.Series["ImpEuler"].Enabled;
         }
 
+        
         //Change visibility of Runge-Kutta Graphs
-
         private void checkBox_RK_GoS_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["RK"].Enabled = !GS_chart.Series["RK"].Enabled;
@@ -215,15 +210,11 @@ namespace DE
             GTE_chart.Series["RK"].Enabled = !GTE_chart.Series["RK"].Enabled;
         }
 
+        
         //Change visibility of Exact solutin Graphs
         private void checkBox_ES_CheckedChanged(object sender, EventArgs e)
         {
             GS_chart.Series["Exact solution"].Enabled = !GS_chart.Series["Exact solution"].Enabled;
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
