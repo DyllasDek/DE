@@ -3,10 +3,10 @@ namespace Errors
 {
     public class GTE
     {
-        public static double[] Global_Err(string Name,double x0, double y0, double X, int N, int n0)
+        public static double[] Global_Err(string Name,double x0, double y0, double X, uint N, uint n0)
         {
             double[] Err = new double[N - n0 + 1];
-            for (int En = n0; En <= N; En++)
+            for (uint En = n0; En <= N; En++)
             {
                 switch (Name) {
                     case "E":
@@ -23,7 +23,7 @@ namespace Errors
             return Err;
         }
 
-        private static double MaxLocalErr(double[,] LR,int N)
+        private static double MaxLocalErr(double[,] LR,uint N)
         {
             double max = double.MinValue;
             for (int i = 0; i < N; i++)

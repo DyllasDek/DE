@@ -4,7 +4,7 @@ namespace Errors
 {
     public class LTE
     {
-        public static double[,] Local_Err(double[,] Exact, double[,] Approx, int N)
+        public static double[,] Local_Err(double[,] Exact, double[,] Approx, uint N)
         {
             double[,] Err = new double[N,2];
             for (int i = 0; i < N; i++)

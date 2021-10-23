@@ -1,25 +1,26 @@
 ﻿using System;
 namespace Methods
 {
-    public class ES
+    class ES
     {
-        private static double func(double x, double y)
-        {
-            return ((y+x)*Math.Pow(Math.E,x)/x);
-        }
+        private static double Func(double x, double C) => (C * x / Math.Pow(Math.E, x) - x);
 
-        public static double[,] Graph(double x0, double y0, double X, int N)
+        private static double Const(double x, double y) => ((y + x) * Math.Pow(Math.E, x) / x);
+
+        public static double[,] Graph(double x0, double y0, double X, uint N)
         {
             double h = (X - x0) / N;
             double[,] arrayXY = new double[N, 2];
-            double C = func(x0, y0);
+            double C = Const(x0, y0);
+
             arrayXY[0, 0] = x0;
             arrayXY[0, 1] = y0;
+            
             for (int i = 1; i < N; i++)
             {
                 x0 += h;
                 arrayXY[i, 0] = x0;
-                arrayXY[i, 1] = C * x0 / Math.Pow(Math.E, x0) - x0;
+                arrayXY[i, 1] = Func(x0, C);
             }
             return arrayXY;
         }

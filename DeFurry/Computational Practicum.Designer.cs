@@ -59,14 +59,18 @@ namespace DE
             this.Text_X = new System.Windows.Forms.Label();
             this.Text_N = new System.Windows.Forms.Label();
             this.button_S = new System.Windows.Forms.Button();
-            this.LTE_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.LTE_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button_GoS = new System.Windows.Forms.Button();
             this.button_LTE = new System.Windows.Forms.Button();
             this.button_GTE = new System.Windows.Forms.Button();
             this.GTE_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.value_N0 = new System.Windows.Forms.TextBox();
+            this.checkBox_euler = new System.Windows.Forms.CheckBox();
+            this.checkBox_IE = new System.Windows.Forms.CheckBox();
+            this.checkBox_RK = new System.Windows.Forms.CheckBox();
+            this.checkBox_ES = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LTE_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LTE_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GTE_chart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +94,7 @@ namespace DE
             series1.Font = null;
             series1.LabelBorderWidth = 2;
             series1.Legend = "Legend1";
-            series1.Name = "Exact Solution";
+            series1.Name = "Exact solution";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -138,7 +142,7 @@ namespace DE
             // 
             // value_y0
             // 
-            this.value_y0.Location = new System.Drawing.Point(668, 109);
+            this.value_y0.Location = new System.Drawing.Point(669, 65);
             this.value_y0.Name = "value_y0";
             this.value_y0.Size = new System.Drawing.Size(100, 20);
             this.value_y0.TabIndex = 3;
@@ -146,7 +150,7 @@ namespace DE
             // 
             // value_x0
             // 
-            this.value_x0.Location = new System.Drawing.Point(668, 162);
+            this.value_x0.Location = new System.Drawing.Point(669, 118);
             this.value_x0.Name = "value_x0";
             this.value_x0.Size = new System.Drawing.Size(100, 20);
             this.value_x0.TabIndex = 5;
@@ -154,7 +158,7 @@ namespace DE
             // 
             // value_X
             // 
-            this.value_X.Location = new System.Drawing.Point(669, 215);
+            this.value_X.Location = new System.Drawing.Point(669, 171);
             this.value_X.Name = "value_X";
             this.value_X.Size = new System.Drawing.Size(100, 20);
             this.value_X.TabIndex = 7;
@@ -162,7 +166,7 @@ namespace DE
             // 
             // value_N
             // 
-            this.value_N.Location = new System.Drawing.Point(669, 268);
+            this.value_N.Location = new System.Drawing.Point(669, 224);
             this.value_N.Name = "value_N";
             this.value_N.Size = new System.Drawing.Size(100, 20);
             this.value_N.TabIndex = 9;
@@ -172,7 +176,7 @@ namespace DE
             // 
             this.Text_y0.AutoSize = true;
             this.Text_y0.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_y0.Location = new System.Drawing.Point(668, 85);
+            this.Text_y0.Location = new System.Drawing.Point(669, 41);
             this.Text_y0.Name = "Text_y0";
             this.Text_y0.Size = new System.Drawing.Size(28, 21);
             this.Text_y0.TabIndex = 10;
@@ -182,7 +186,7 @@ namespace DE
             // 
             this.Text_x0.AutoSize = true;
             this.Text_x0.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_x0.Location = new System.Drawing.Point(668, 138);
+            this.Text_x0.Location = new System.Drawing.Point(669, 94);
             this.Text_x0.Name = "Text_x0";
             this.Text_x0.Size = new System.Drawing.Size(28, 21);
             this.Text_x0.TabIndex = 11;
@@ -192,7 +196,7 @@ namespace DE
             // 
             this.Text_X.AutoSize = true;
             this.Text_X.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_X.Location = new System.Drawing.Point(668, 191);
+            this.Text_X.Location = new System.Drawing.Point(669, 147);
             this.Text_X.Name = "Text_X";
             this.Text_X.Size = new System.Drawing.Size(23, 21);
             this.Text_X.TabIndex = 12;
@@ -202,7 +206,7 @@ namespace DE
             // 
             this.Text_N.AutoSize = true;
             this.Text_N.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_N.Location = new System.Drawing.Point(668, 244);
+            this.Text_N.Location = new System.Drawing.Point(669, 200);
             this.Text_N.Name = "Text_N";
             this.Text_N.Size = new System.Drawing.Size(23, 21);
             this.Text_N.TabIndex = 13;
@@ -211,7 +215,7 @@ namespace DE
             // button_S
             // 
             this.button_S.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_S.Location = new System.Drawing.Point(668, 309);
+            this.button_S.Location = new System.Drawing.Point(669, 265);
             this.button_S.Name = "button_S";
             this.button_S.Size = new System.Drawing.Size(100, 28);
             this.button_S.TabIndex = 14;
@@ -219,7 +223,7 @@ namespace DE
             this.button_S.UseVisualStyleBackColor = true;
             this.button_S.Click += new System.EventHandler(this.button_S_Click);
             // 
-            // LTE_Chart
+            // LTE_chart
             // 
             chartArea2.AxisX.MajorGrid.Enabled = false;
             chartArea2.AxisX.Title = "x";
@@ -227,11 +231,11 @@ namespace DE
             chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
             chartArea2.AxisY.Title = "E";
             chartArea2.Name = "ChartArea1";
-            this.LTE_Chart.ChartAreas.Add(chartArea2);
+            this.LTE_chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.LTE_Chart.Legends.Add(legend2);
-            this.LTE_Chart.Location = new System.Drawing.Point(12, 41);
-            this.LTE_Chart.Name = "LTE_Chart";
+            this.LTE_chart.Legends.Add(legend2);
+            this.LTE_chart.Location = new System.Drawing.Point(12, 41);
+            this.LTE_chart.Name = "LTE_chart";
             series5.BorderWidth = 2;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -248,17 +252,17 @@ namespace DE
             series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             series7.Legend = "Legend1";
             series7.Name = "RK";
-            this.LTE_Chart.Series.Add(series5);
-            this.LTE_Chart.Series.Add(series6);
-            this.LTE_Chart.Series.Add(series7);
-            this.LTE_Chart.Size = new System.Drawing.Size(650, 400);
-            this.LTE_Chart.TabIndex = 15;
-            this.LTE_Chart.Text = "chart2";
+            this.LTE_chart.Series.Add(series5);
+            this.LTE_chart.Series.Add(series6);
+            this.LTE_chart.Series.Add(series7);
+            this.LTE_chart.Size = new System.Drawing.Size(650, 400);
+            this.LTE_chart.TabIndex = 15;
+            this.LTE_chart.Text = "chart2";
             title2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title2.Name = "Title1";
             title2.Text = "LTE";
-            this.LTE_Chart.Titles.Add(title2);
-            this.LTE_Chart.Visible = false;
+            this.LTE_chart.Titles.Add(title2);
+            this.LTE_chart.Visible = false;
             // 
             // button_GoS
             // 
@@ -333,12 +337,64 @@ namespace DE
             // 
             // value_N0
             // 
-            this.value_N0.Location = new System.Drawing.Point(669, 215);
+            this.value_N0.Location = new System.Drawing.Point(669, 171);
             this.value_N0.Name = "value_N0";
             this.value_N0.Size = new System.Drawing.Size(100, 20);
             this.value_N0.TabIndex = 21;
-            this.value_N0.Text = "1";
+            this.value_N0.Text = "10";
             this.value_N0.Visible = false;
+            // 
+            // checkBox_euler
+            // 
+            this.checkBox_euler.AutoSize = true;
+            this.checkBox_euler.Checked = true;
+            this.checkBox_euler.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_euler.Location = new System.Drawing.Point(669, 317);
+            this.checkBox_euler.Name = "checkBox_euler";
+            this.checkBox_euler.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_euler.TabIndex = 22;
+            this.checkBox_euler.Text = "Show Euler";
+            this.checkBox_euler.UseVisualStyleBackColor = true;
+            this.checkBox_euler.CheckedChanged += new System.EventHandler(this.checkBox_euler_CheckedChanged);
+            // 
+            // checkBox_IE
+            // 
+            this.checkBox_IE.AutoSize = true;
+            this.checkBox_IE.Checked = true;
+            this.checkBox_IE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_IE.Location = new System.Drawing.Point(669, 341);
+            this.checkBox_IE.Name = "checkBox_IE";
+            this.checkBox_IE.Size = new System.Drawing.Size(100, 17);
+            this.checkBox_IE.TabIndex = 23;
+            this.checkBox_IE.Text = "Show Imp Euler";
+            this.checkBox_IE.UseVisualStyleBackColor = true;
+            this.checkBox_IE.CheckedChanged += new System.EventHandler(this.checkBox_IE_CheckedChanged);
+            // 
+            // checkBox_RK
+            // 
+            this.checkBox_RK.AutoSize = true;
+            this.checkBox_RK.Checked = true;
+            this.checkBox_RK.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_RK.Location = new System.Drawing.Point(669, 364);
+            this.checkBox_RK.Name = "checkBox_RK";
+            this.checkBox_RK.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_RK.TabIndex = 24;
+            this.checkBox_RK.Text = "Show RK";
+            this.checkBox_RK.UseVisualStyleBackColor = true;
+            this.checkBox_RK.CheckedChanged += new System.EventHandler(this.checkBox_RK_CheckedChanged);
+            // 
+            // checkBox_ES
+            // 
+            this.checkBox_ES.AutoSize = true;
+            this.checkBox_ES.Checked = true;
+            this.checkBox_ES.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ES.Location = new System.Drawing.Point(669, 387);
+            this.checkBox_ES.Name = "checkBox_ES";
+            this.checkBox_ES.Size = new System.Drawing.Size(104, 17);
+            this.checkBox_ES.TabIndex = 25;
+            this.checkBox_ES.Text = "Show Exact Sol.";
+            this.checkBox_ES.UseVisualStyleBackColor = true;
+            this.checkBox_ES.CheckedChanged += new System.EventHandler(this.checkBox_ES_CheckedChanged);
             // 
             // Comp_Pract
             // 
@@ -348,7 +404,10 @@ namespace DE
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(783, 499);
-            this.Controls.Add(this.value_N0);
+            this.Controls.Add(this.checkBox_ES);
+            this.Controls.Add(this.checkBox_RK);
+            this.Controls.Add(this.checkBox_IE);
+            this.Controls.Add(this.checkBox_euler);
             this.Controls.Add(this.button_GTE);
             this.Controls.Add(this.button_LTE);
             this.Controls.Add(this.button_GoS);
@@ -358,17 +417,18 @@ namespace DE
             this.Controls.Add(this.Text_x0);
             this.Controls.Add(this.Text_y0);
             this.Controls.Add(this.value_N);
-            this.Controls.Add(this.value_X);
             this.Controls.Add(this.value_x0);
             this.Controls.Add(this.value_y0);
             this.Controls.Add(this.FODE);
             this.Controls.Add(this.GS_chart);
-            this.Controls.Add(this.LTE_Chart);
+            this.Controls.Add(this.LTE_chart);
             this.Controls.Add(this.GTE_chart);
+            this.Controls.Add(this.value_N0);
+            this.Controls.Add(this.value_X);
             this.Name = "Comp_Pract";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.GS_chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LTE_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LTE_chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GTE_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -390,9 +450,13 @@ namespace DE
         private System.Windows.Forms.Button button_LTE;
         private System.Windows.Forms.Button button_GTE;
         private System.Windows.Forms.DataVisualization.Charting.Chart GS_chart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart LTE_Chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart LTE_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart GTE_chart;
         private System.Windows.Forms.TextBox value_N0;
+        private System.Windows.Forms.CheckBox checkBox_euler;
+        private System.Windows.Forms.CheckBox checkBox_IE;
+        private System.Windows.Forms.CheckBox checkBox_RK;
+        private System.Windows.Forms.CheckBox checkBox_ES;
     }
 }
 

@@ -10,8 +10,8 @@ namespace DE
         private double x0 = 1;
         private double y0 = 0;
         private double X = 10;
-        private int N = 100;
-        private int n0 = 1;
+        private uint N = 100;
+        private uint n0 = 10;
         public Comp_Pract()
         {
             InitializeComponent();
@@ -22,14 +22,16 @@ namespace DE
         {
             Text_X.Text = "X";
             value_N0.Visible = false;
+            
             value_X.Visible = true;
             value_x0.Visible = true;
             value_y0.Visible = true;
             Text_y0.Visible = true;
             Text_x0.Visible = true;
+            checkBox_ES.Visible = true;
 
             GS_chart.Visible = true;
-            LTE_Chart.Visible = false;
+            LTE_chart.Visible = false;
             GTE_chart.Visible = false;
         }
 
@@ -37,14 +39,16 @@ namespace DE
         {
             Text_X.Text = "X";
             value_N0.Visible = false;
+            
             value_X.Visible = true;
             value_x0.Visible = true;
             value_y0.Visible = true;
             Text_y0.Visible = true;
             Text_x0.Visible = true;
+            checkBox_ES.Visible = false;
 
             GS_chart.Visible = false;
-            LTE_Chart.Visible = true;
+            LTE_chart.Visible = true;
             GTE_chart.Visible = false;
         }
 
@@ -52,33 +56,39 @@ namespace DE
         {
             Text_X.Text = "n0";
             value_N0.Visible = true;
+            
             value_X.Visible = false;
             value_x0.Visible = false;
             value_y0.Visible = false;
             Text_y0.Visible = false;
             Text_x0.Visible = false;
+            checkBox_ES.Visible = false;
 
             GS_chart.Visible = false;
-            LTE_Chart.Visible = false;
+            LTE_chart.Visible = false;
             GTE_chart.Visible = true;
         }
 
         private void button_S_Click(object sender, EventArgs e)
         {
-            foreach (var series in GS_chart.Series) series.Points.Clear();
-            foreach (var series in LTE_Chart.Series) series.Points.Clear();
-            foreach (var series in GTE_chart.Series) series.Points.Clear();
             try
             {
                 x0 = double.Parse(value_x0.Text);
                 y0 = double.Parse(value_y0.Text);
                 X = double.Parse(value_X.Text);
-                N = int.Parse(value_N.Text);
-                n0 = int.Parse(value_N0.Text);
+                N = uint.Parse(value_N.Text);
+                n0 = uint.Parse(value_N0.Text);
                 if ((X-x0)/N > 1)
                 {
                     throw new Exception("The length of the interval exceeds the number of iterations. \"X - x0\" must be less than \"N\"");
                 }
+                else if((X - x0) / n0 > 1)
+                {
+                    throw new Exception("The length of the interval exceeds the number of minimal iterations. \"X - x0\" must be less than \"n0\"");
+                }
+                foreach (var series in GS_chart.Series) series.Points.Clear();
+                foreach (var series in LTE_chart.Series) series.Points.Clear();
+                foreach (var series in GTE_chart.Series) series.Points.Clear();
                 GraphBuilder();
             }
             catch(Exception EE)
@@ -102,19 +112,48 @@ namespace DE
 
             for (int i = 0; i < N; i++)
             {
-                GS_chart.Series[0].Points.AddXY(arrES[i, 0], arrES[i, 1]);
-                GS_chart.Series[1].Points.AddXY(arrE[i, 0], arrE[i, 1]);
-                GS_chart.Series[2].Points.AddXY(arrIE[i, 0], arrIE[i, 1]);
-                GS_chart.Series[3].Points.AddXY(arrRK[i, 0], arrRK[i, 1]);
-                LTE_Chart.Series[0].Points.AddXY(arrLE_E[i, 0], arrLE_E[i, 1]);
-                LTE_Chart.Series[1].Points.AddXY(arrLE_IE[i, 0], arrLE_IE[i, 1]);
-                LTE_Chart.Series[2].Points.AddXY(arrLE_RK[i, 0], arrLE_RK[i, 1]);
+                GS_chart.Series["Exact solution"].Points.AddXY(arrES[i, 0], arrES[i, 1]);
+                GS_chart.Series["Euler"].Points.AddXY(arrE[i, 0], arrE[i, 1]);
+                GS_chart.Series["ImpEuler"].Points.AddXY(arrIE[i, 0], arrIE[i, 1]);
+                GS_chart.Series["RK"].Points.AddXY(arrRK[i, 0], arrRK[i, 1]);
+                
+                LTE_chart.Series["Euler"].Points.AddXY(arrLE_E[i, 0], arrLE_E[i, 1]);
+                LTE_chart.Series["ImpEuler"].Points.AddXY(arrLE_IE[i, 0], arrLE_IE[i, 1]);
+                LTE_chart.Series["RK"].Points.AddXY(arrLE_RK[i, 0], arrLE_RK[i, 1]);
             }
             for (int i = 0; i < N-n0+1; i++) {
-                GTE_chart.Series[0].Points.AddXY(i + n0, arrGE_E[i]);
-                GTE_chart.Series[1].Points.AddXY(i + n0, arrGE_IE[i]);
-                GTE_chart.Series[2].Points.AddXY(i + n0, arrGE_RK[i]);
+                GTE_chart.Series["Euler"].Points.AddXY(i + n0, arrGE_E[i]);
+                GTE_chart.Series["ImpEuler"].Points.AddXY(i + n0, arrGE_IE[i]);
+                GTE_chart.Series["RK"].Points.AddXY(i + n0, arrGE_RK[i]);
             }
+        }
+
+        private void checkBox_euler_CheckedChanged(object sender, EventArgs e)
+        {
+            GS_chart.Series["Euler"].Enabled = !GS_chart.Series["Euler"].Enabled;
+            LTE_chart.Series["Euler"].Enabled = !LTE_chart.Series["Euler"].Enabled;
+            GTE_chart.Series["Euler"].Enabled = !GTE_chart.Series["Euler"].Enabled;
+        }
+
+        private void checkBox_IE_CheckedChanged(object sender, EventArgs e)
+        {
+            GS_chart.Series["ImpEuler"].Enabled = !GS_chart.Series["ImpEuler"].Enabled;
+            LTE_chart.Series["ImpEuler"].Enabled = !LTE_chart.Series["ImpEuler"].Enabled;
+            GTE_chart.Series["ImpEuler"].Enabled = !GTE_chart.Series["ImpEuler"].Enabled;
+        }
+
+        private void checkBox_RK_CheckedChanged(object sender, EventArgs e)
+        {
+            GS_chart.Series["RK"].Enabled = !GS_chart.Series["RK"].Enabled;
+            LTE_chart.Series["RK"].Enabled = !LTE_chart.Series["RK"].Enabled;
+            GTE_chart.Series["RK"].Enabled = !GTE_chart.Series["RK"].Enabled;
+        }
+
+        private void checkBox_ES_CheckedChanged(object sender, EventArgs e)
+        {
+            GS_chart.Series["Exact solution"].Enabled = !GS_chart.Series["Exact solution"].Enabled;
+            LTE_chart.Series["Exact solution"].Enabled = !LTE_chart.Series["Exact solution"].Enabled;
+            GTE_chart.Series["Exact solution"].Enabled = !GTE_chart.Series["Exact solution"].Enabled;
         }
     }
 }
