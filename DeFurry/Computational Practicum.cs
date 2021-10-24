@@ -13,10 +13,12 @@ namespace DE
         private double X = 10;
         private uint N = 100;
         private uint n0 = 10;
+        private double h;
 
         //Constructor of the form
         public Comp_Pract()
         {
+            h = (X - x0) / N;
             InitializeComponent();
             GraphBuilder();
         }
@@ -121,7 +123,8 @@ namespace DE
                 foreach (var series in GS_chart.Series) series.Points.Clear();
                 foreach (var series in LTE_chart.Series) series.Points.Clear();
                 foreach (var series in GTE_chart.Series) series.Points.Clear();
-                
+                h = (X - x0) / N;
+
                 //Call Graph Builder
                 GraphBuilder();
             }
@@ -138,31 +141,35 @@ namespace DE
         private void GraphBuilder()
         {
             //X and Y values of all graphs
-            double[,] arrES = ES.Graph(x0, y0, X, N);
-            double[,] arrE = Euler.Graph(x0, y0, X, N);
-            double[,] arrIE = Imp_Euler.Graph(x0, y0, X, N);
-            double[,] arrRK = RK.Graph(x0, y0, X, N);
-            double[,] arrLE_E = LTE.Local_Err(arrES, arrE,N);
-            double[,] arrLE_IE = LTE.Local_Err(arrES, arrIE,N);
-            double[,] arrLE_RK = LTE.Local_Err(arrES, arrRK,N);
+            double[] arrES = ES.Graph(x0, y0, X, N);
+            double[] arrE = Euler.Graph(x0, y0, X, N);
+            double[] arrIE = Imp_Euler.Graph(x0, y0, X, N);
+            double[] arrRK = RK.Graph(x0, y0, X, N);
+            double[] arrLE_E = LTE.Local_Err(arrES, arrE,N);
+            double[] arrLE_IE = LTE.Local_Err(arrES, arrIE,N);
+            double[] arrLE_RK = LTE.Local_Err(arrES, arrRK,N);
             double[] arrGE_E = GTE.Global_Err("E",x0, y0, X, N, n0);
             double[] arrGE_IE = GTE.Global_Err("IE", x0, y0, X, N, n0);
             double[] arrGE_RK = GTE.Global_Err("RK", x0, y0, X, N, n0);
+            double outx = x0;
 
             //Building the graphs
             for (int i = 0; i < N; i++)
             {
                 //Building Solutions Graph
-                GS_chart.Series["Exact solution"].Points.AddXY(arrES[i, 0], arrES[i, 1]);
-                GS_chart.Series["Euler"].Points.AddXY(arrE[i, 0], arrE[i, 1]);
-                GS_chart.Series["ImpEuler"].Points.AddXY(arrIE[i, 0], arrIE[i, 1]);
-                GS_chart.Series["RK"].Points.AddXY(arrRK[i, 0], arrRK[i, 1]);
+                GS_chart.Series["Exact solution"].Points.AddXY(outx, arrES[i]);
+                GS_chart.Series["Euler"].Points.AddXY(outx, arrE[i]);
+                GS_chart.Series["ImpEuler"].Points.AddXY(outx, arrIE[i]);
+                GS_chart.Series["RK"].Points.AddXY(outx, arrRK[i]);
                 
                 //Building LTE graph
-                LTE_chart.Series["Euler"].Points.AddXY(arrLE_E[i, 0], arrLE_E[i, 1]);
-                LTE_chart.Series["ImpEuler"].Points.AddXY(arrLE_IE[i, 0], arrLE_IE[i, 1]);
-                LTE_chart.Series["RK"].Points.AddXY(arrLE_RK[i, 0], arrLE_RK[i, 1]);
+                LTE_chart.Series["Euler"].Points.AddXY(outx, arrLE_E[i]);
+                LTE_chart.Series["ImpEuler"].Points.AddXY(outx, arrLE_IE[i]);
+                LTE_chart.Series["RK"].Points.AddXY(outx, arrLE_RK[i]);
+
+                outx += h;
             }
+
             for (int i = 0; i < N-n0+1; i++) {
 
                 //Building GTE graph

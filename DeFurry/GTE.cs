@@ -25,13 +25,13 @@ namespace Errors
         }
 
         //Method of finding Maximum Locall Err
-        private static double MaxLocalErr(double[,] LR,uint N)
+        private static double MaxLocalErr(double[] LR,uint N)
         {
             double max = double.MinValue;
             for (int i = 0; i < N; i++)
             {
-                if (LR[i,1] > max){
-                    max = LR[i, 1];
+                if (LR[i] > max){
+                    max = LR[i];
                 }
             }
             return max;

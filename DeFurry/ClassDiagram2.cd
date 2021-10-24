@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DE.Comp_Pract">
-    <Position X="9.5" Y="3" Width="4.75" />
+    <Position X="5.75" Y="1.25" Width="2.25" />
     <Members>
       <Field Name="button_GoS" Hidden="true" />
       <Method Name="button_GoS_Click" Hidden="true" />
@@ -36,7 +36,6 @@
       <Field Name="FODE" Hidden="true" />
       <Field Name="GS_chart" Hidden="true" />
       <Field Name="GTE_chart" Hidden="true" />
-      <Method Name="InitializeComponent" Hidden="true" />
       <Field Name="LTE_chart" Hidden="true" />
       <Field Name="panel1" Hidden="true" />
       <Field Name="Text_N" Hidden="true" />
@@ -51,47 +50,47 @@
       <Field Name="value_y0" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAIYgxGAgDUEEQADIAGAIAQCECBihAgAAAADIRAARYA=</HashCode>
+      <HashCode>AAIYgxGAgDUEEQADIAGAIAQCECBihAgAQAADIRAARYA=</HashCode>
       <FileName>Computational Practicum.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Methods.ES">
-    <Position X="4.5" Y="1.25" Width="3.75" />
+    <Position X="1.75" Y="1.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAgAAAABAAAAAAA=</HashCode>
       <FileName>ES.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Methods.Euler">
-    <Position X="4.5" Y="4.5" Width="3.75" />
+    <Position X="1.75" Y="3" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAA=</HashCode>
       <FileName>Euler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Methods.Imp_Euler">
-    <Position X="4.5" Y="6" Width="3.75" />
+    <Position X="1.75" Y="4.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAA=</HashCode>
       <FileName>Imp_Euler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Methods.RK">
-    <Position X="4.5" Y="3" Width="3.75" />
+    <Position X="1.75" Y="6" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAA=</HashCode>
       <FileName>RK.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Errors.GTE">
-    <Position X="9.5" Y="1.25" Width="5.25" />
+    <Position X="5.75" Y="6" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GTE.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Errors.LTE">
-    <Position X="9.75" Y="6" Width="4" />
+    <Position X="7" Y="4.5" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LTE.cs</FileName>
