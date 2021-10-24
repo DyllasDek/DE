@@ -12,7 +12,7 @@ namespace Methods
         //Output X and Y of the Exact Solution
         public static double[] Graph(double x0, double y0, double X, uint N)
         {
-            double h = (X - x0) / N;
+            double h = (X - x0) / (N - 1);
             double[] arrayXY = new double[N];
             double C = Const(x0, y0);
             

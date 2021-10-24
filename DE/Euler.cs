@@ -8,7 +8,7 @@
         //Output X and Y of the Euler method
         public static double[] Graph(double x0, double y0,double X, uint N)
         {
-            double h = (X - x0) / N;
+            double h = (X - x0) / (N - 1);
             double[] arrayXY = new double[N];
             
             arrayXY[0] = y0;

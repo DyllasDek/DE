@@ -18,7 +18,7 @@ namespace DE
         //Constructor of the form
         public Comp_Pract()
         {
-            h = (X - x0) / N;
+            h = (X - x0) / (N-1);
             InitializeComponent();
             GraphBuilder();
         }
@@ -123,7 +123,7 @@ namespace DE
                 foreach (var series in GS_chart.Series) series.Points.Clear();
                 foreach (var series in LTE_chart.Series) series.Points.Clear();
                 foreach (var series in GTE_chart.Series) series.Points.Clear();
-                h = (X - x0) / N;
+                h = (X - x0) / (N - 1);
 
                 //Call Graph Builder
                 GraphBuilder();
