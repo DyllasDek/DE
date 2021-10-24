@@ -11,13 +11,13 @@ namespace Errors
             {
                 switch (Name) {
                     case "E":
-                        Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Euler.Graph(x0, y0, X, En),En),En);
+                        Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Euler.Graph(x0, y0, X, En),En), En);
                         break;
                     case "IE":
                         Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), Imp_Euler.Graph(x0, y0, X, En),En), En);
                         break;
                     case "RK":
-                        Err[En - n0] = MaxLocalErr( LTE.Local_Err(ES.Graph(x0, y0, X, En), RK.Graph(x0, y0, X, En),En), En);
+                        Err[En - n0] = MaxLocalErr(LTE.Local_Err(ES.Graph(x0, y0, X, En), RK.Graph(x0, y0, X, En),En), En);
                         break;
                 }
             }
