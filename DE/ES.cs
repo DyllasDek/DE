@@ -7,15 +7,25 @@ namespace Methods
         private static double Func(double x, double C) => (C * x / Math.Pow(Math.E, x) - x);
 
         //Get the const for the Exact Solution
-        private static double Const(double x, double y) => ((y + x) * Math.Pow(Math.E, x) / x);
+        private static double Const(double x, double y)
+        {
+            if (x != 0)
+            {
+                return (y + x) * Math.Pow(Math.E, x) / x;
+            }
+            else
+            {
+                return Double.NegativeInfinity;
+            }
+        }
 
         //Output X and Y of the Exact Solution
         public static double[] Graph(double x0, double y0, double X, uint N)
         {
-            double h = (X - x0) / (N - 1);
+            double h = (X - x0) / (N - 1f);
             double[] arrayXY = new double[N];
             double C = Const(x0, y0);
-            
+
             for (int i = 1; i < N; i++)
             {
                 x0 += h;

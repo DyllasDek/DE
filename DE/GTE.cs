@@ -1,4 +1,5 @@
 ﻿using Methods;
+using System;
 namespace Errors
 {
     public class GTE
@@ -28,9 +29,11 @@ namespace Errors
         private static double MaxLocalErr(double[] LR,uint N)
         {
             double max = double.MinValue;
+
             for (int i = 0; i < N; i++)
             {
-                if (LR[i] > max){
+                if (LR[i] == Double.NegativeInfinity) { continue; }
+                if (LR[i] >= max){
                     max = LR[i];
                 }
             }

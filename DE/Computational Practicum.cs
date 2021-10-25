@@ -18,7 +18,7 @@ namespace DE
         //Constructor of the form
         public Comp_Pract()
         {
-            h = (X - x0) / (N-1);
+            h = (X - x0) / (N-1f);
             InitializeComponent();
             GraphBuilder();
         }
@@ -102,9 +102,9 @@ namespace DE
                 n0 = uint.Parse(value_N0.Text);
 
                 //Exceptions
-                if (x0 <= 0)
+                if ((y0 + x0) * Math.Pow(Math.E, x0) / x0 <= 0)
                 {
-                    throw new Exception("x0 can\'t be less or equal zero");
+                    throw new Exception("For such values Const will be less or equal zero.");
                 }
                 else if (X <= x0)
                 {
@@ -118,12 +118,13 @@ namespace DE
                 {
                     throw new Exception("The length of the interval exceeds the number of minimal iterations. \"X - x0\" must be less than \"n0\"");
                 }
+                
 
                 //Clean the graphs
                 foreach (var series in GS_chart.Series) series.Points.Clear();
                 foreach (var series in LTE_chart.Series) series.Points.Clear();
                 foreach (var series in GTE_chart.Series) series.Points.Clear();
-                h = (X - x0) / (N - 1);
+                h = (X - x0) / (N - 1f);
 
                 //Call Graph Builder
                 GraphBuilder();
@@ -132,7 +133,6 @@ namespace DE
             //Exceptions output
             catch(Exception EE)
             {
-
                 MessageBox.Show(EE.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
@@ -157,21 +157,19 @@ namespace DE
             for (int i = 0; i < N; i++)
             {
                 //Building Solutions Graph
-                GS_chart.Series["Exact solution"].Points.AddXY(outx, arrES[i]);
-                GS_chart.Series["Euler"].Points.AddXY(outx, arrE[i]);
-                GS_chart.Series["ImpEuler"].Points.AddXY(outx, arrIE[i]);
-                GS_chart.Series["RK"].Points.AddXY(outx, arrRK[i]);
-                
+                if (arrES[i] != Double.NegativeInfinity) GS_chart.Series["Exact solution"].Points.AddXY(outx, arrES[i]);
+                if (arrE[i] != Double.NegativeInfinity) GS_chart.Series["Euler"].Points.AddXY(outx, arrE[i]);
+                if (arrIE[i] != Double.NegativeInfinity) GS_chart.Series["ImpEuler"].Points.AddXY(outx, arrIE[i]);
+                if (arrRK[i] != Double.NegativeInfinity) GS_chart.Series["RK"].Points.AddXY(outx, arrRK[i]);
+
                 //Building LTE graph
-                LTE_chart.Series["Euler"].Points.AddXY(outx, arrLE_E[i]);
-                LTE_chart.Series["ImpEuler"].Points.AddXY(outx, arrLE_IE[i]);
-                LTE_chart.Series["RK"].Points.AddXY(outx, arrLE_RK[i]);
+                if (arrLE_E[i] != Double.NegativeInfinity) LTE_chart.Series["Euler"].Points.AddXY(outx, arrLE_E[i]);
+                if (arrLE_IE[i] != Double.NegativeInfinity) LTE_chart.Series["ImpEuler"].Points.AddXY(outx, arrLE_IE[i]);
+                if (arrLE_RK[i] != Double.NegativeInfinity) LTE_chart.Series["RK"].Points.AddXY(outx, arrLE_RK[i]);
 
                 outx += h;
             }
-
             for (int i = 0; i < N-n0+1; i++) {
-
                 //Building GTE graph
                 GTE_chart.Series["Euler"].Points.AddXY(i + n0, arrGE_E[i]);
                 GTE_chart.Series["ImpEuler"].Points.AddXY(i + n0, arrGE_IE[i]);
